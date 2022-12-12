@@ -1,5 +1,3 @@
-package concurrency;
-
 public class EmailScheduler implements Runnable {
 
     @Override
@@ -23,11 +21,12 @@ public class EmailScheduler implements Runnable {
         thread2.start();
 
         try {
-            thread2.join(1);
+            thread2.join(1000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
 
         System.out.println("inside main thread..");
     }
+
 }

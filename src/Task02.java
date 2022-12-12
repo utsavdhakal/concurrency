@@ -1,8 +1,7 @@
-package concurrency;
-
 import java.util.concurrent.TimeUnit;
 
-public class Task2 extends Thread {
+public class Task02 extends Thread {
+
     @Override
     public void run() {
         try {
@@ -14,7 +13,7 @@ public class Task2 extends Thread {
     }
 
     public static void main(String[] args) {
-        Thread thread = new Task2();
+        Thread thread = new Task02();
         thread.start();
         try {
             /*Thread.sleep(3000);*/
@@ -24,4 +23,5 @@ public class Task2 extends Thread {
         }
         System.out.println("inside main method");
     }
+
 }
